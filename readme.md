@@ -31,7 +31,12 @@ pacman -S \
 	mingw-w64-x86_64-lld 12.0.0-7
 ```
 
-> You may need to use the following automake command if some error raises when compiling: ```automake --add-missing```
+> Some packages might not be in the official repositories. Search and download files separately and install them using: 
+> ```pacman -U autoconf-wrapper-15-1-any.pkg.tar.zst```
+
+
+> You may need to use the following automake command if some error raises when compiling:
+> ```automake --add-missing```
 
 # TO-DO:
 
