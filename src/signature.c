@@ -23,7 +23,7 @@ signature(pset_family F1, pset_family D1, pset_family R1)
 	pcover ESC,ESSet,ESSENTIAL;
 	pcover F,D,R;
 	pcube last,p;
-	struct sigaction xcpu_action;
+	//struct sigaction xcpu_action;
 
 	/* make scratch copy */
 	F = sf_save(F1);
@@ -34,10 +34,10 @@ signature(pset_family F1, pset_family D1, pset_family R1)
 	R = unravel(R, cube.num_binary_vars);
 	R = sf_contain(R);
 
-	xcpu_action.sa_handler = (void (*)()) cleanup;
-	sigemptyset (&xcpu_action.sa_mask);
-	xcpu_action.sa_flags = 0;
-	sigaction (SIGXCPU, &xcpu_action, NULL);
+	//xcpu_action.sa_handler = (void (*)()) cleanup;
+	//sigemptyset (&xcpu_action.sa_mask);
+	//xcpu_action.sa_flags = 0;
+	//sigaction (SIGXCPU, &xcpu_action, NULL);*/
 	start_time = ptime();
 
 	/* Initial expand and irredundant */

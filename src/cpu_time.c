@@ -36,7 +36,7 @@
 
 #ifdef BSD
 #include <sys/time.h>
-#include <sys/resource.h>
+//#include <sys/resource.h>
 #endif
 
 #ifdef UNIX10
@@ -61,9 +61,9 @@ long util_cpu_time(void)
     long t = 0;
 
 #ifdef BSD
-    struct rusage rusage;
-    (void) getrusage(RUSAGE_SELF, &rusage);
-    t = (long) rusage.ru_utime.tv_sec*1000 + rusage.ru_utime.tv_usec/1000;
+    //struct rusage rusage;
+    //(void) getrusage(RUSAGE_SELF, &rusage);
+    //t = (long) rusage.ru_utime.tv_sec*1000 + rusage.ru_utime.tv_usec/1000;*/
 #endif
 
 #ifdef UNIX10			/* times() with 10 Hz resolution */
