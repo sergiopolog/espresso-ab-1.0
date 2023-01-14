@@ -1,6 +1,6 @@
 ## @sergiopolog: Fork with patches to allow compile it under Windows using MinGW.
 
-Some POSIX resources and system calls which are not supported on Windows platform were removed (that probably don't update the behaviour of the app).
+Some POSIX resources and system calls which are not supported on Windows platform were removed (that probably don't modify the main behaviour of the app).
 They are located in files:
 * cpu_time.c
 * signature.c
@@ -12,27 +12,27 @@ Use MinGW under Windows to compile it. Some dependencies are needed to be previo
 
 ```
 pacman -S \
-	autoconf-wrapper 15-1 \
-	autoconf2.13 2.13-5 \
-	autoconf2.69 2.69-2 \
-	autoconf2.71 2.71-1 \
-	automake-wrapper 11-4 \
-	automake1.11 1.11.6-6 \
-	automake1.12 1.12.6-6 \
-	automake1.13 1.13.4-7 \
-	automake1.14 1.14.1-6 \
-	automake1.15 1.15.1-4 \
-	automake1.16 1.16.5-1 \
-	base 2020.12-1 \
-	libtool 2.4.6-11 \
-	make 4.3-1 \
-	mingw-w64-x86_64-gcc 10.3.0-2 \
-	mingw-w64-x86_64-libc++ 12.0.0-7 \
-	mingw-w64-x86_64-lld 12.0.0-7
+	autoconf-wrapper \
+	autoconf2.13 \
+	autoconf2.69 \
+	autoconf2.71 \
+	automake-wrapper \
+	automake1.11 \
+	automake1.12 \
+	automake1.13 \
+	automake1.14 \
+	automake1.15 \
+	automake1.16 \
+	libtool \
+	make \
+	mingw-w64-x86_64-gcc \
+	mingw-w64-x86_64-libc++ \
+	mingw-w64-x86_64-lld
 ```
 
 > Some packages might not be in the official repositories. Search and download files separately and install them using: 
 > ```pacman -U autoconf-wrapper-15-1-any.pkg.tar.zst```
+
 
 
 > You may need to use the following automake command if some error raises when compiling:
